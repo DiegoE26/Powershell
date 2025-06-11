@@ -52,7 +52,7 @@ Add-MailboxPermission -Identity usuario@dominio.com -User otro_usuario@dominio.c
 ## 👥 Consultar miembros de una lista de distribución dinámica
 
 ```powershell
-Get-Recipient -RecipientPreviewFilter (Get-DynamicDistributionGroup "CTAG-Responsables departamento").RecipientFilter
+Get-Recipient -RecipientPreviewFilter (Get-DynamicDistributionGroup DistributionList").RecipientFilter
 ```
 
 _Muestra los miembros reales de una lista de distribución dinámica._
