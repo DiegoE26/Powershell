@@ -70,44 +70,63 @@ A continuación se presentan comandos comunes para la administración del sistem
 
 ## Comandos de PowerShell para Administración de Archivos
 
-- `Get-ChildItem`
-- `Get-Item`
-- `Set-Item`
-- `Remove-Item`
-- `Copy-Item`
-- `Move-Item`
-- `Rename-Item`
-- `New-Item`
-- `Clear-Item`
-- `Get-Content`
-- `Set-Content`
-- `Add-Content`
-- `Clear-Content`
-- `Out-File`
-- `Out-String`
-- `Test-Path`
-- `Split-Path`
-- `Join-Path`
-- `Resolve-Path`
-- `Convert-Path`
-- `Get-Location`
-- `Set-Location`
-- `Push-Location`
-- `Pop-Location`
-- `New-PSDrive`
-- `Remove-PSDrive`
-- `Get-Acl`
-- `Set-Acl`
-- `Get-FileHash`
-- `Compress-Archive`
-- `Expand-Archive`
-- `Get-Unique`
-- `Measure-Object`
-- `Select-String`
-- `Export-Csv`
-- `Import-Csv`
-- `Export-Clixml`
-- `Import-Clixml`
-- `Format-Table`
-- `Format-List`
-- `Format-Wide`
+A continuación se muestran comandos esenciales para la administración de archivos en PowerShell, junto con una breve descripción de su función:
+
+| Comando             | Descripción                                                                 |
+|---------------------|-----------------------------------------------------------------------------|
+| `Get-ChildItem`     | Lista archivos y carpetas en un directorio.                                 |
+| `Get-Item`          | Obtiene información sobre un archivo o carpeta específico.                  |
+| `Set-Item`          | Cambia el valor de un archivo o carpeta.                                    |
+| `Remove-Item`       | Elimina archivos o carpetas.                                                |
+| `Copy-Item`         | Copia archivos o carpetas a otra ubicación.                                 |
+| `Move-Item`         | Mueve archivos o carpetas a otra ubicación.                                 |
+| `Rename-Item`       | Cambia el nombre de un archivo o carpeta.                                   |
+| `New-Item`          | Crea un nuevo archivo o carpeta.                                            |
+| `Clear-Item`        | Borra el contenido de un archivo o carpeta.                                 |
+| `Get-Content`       | Muestra el contenido de un archivo.                                         |
+| `Set-Content`       | Reemplaza el contenido de un archivo.                                       |
+| `Add-Content`       | Agrega contenido a un archivo existente.                                    |
+| `Clear-Content`     | Elimina todo el contenido de un archivo.                                    |
+| `Out-File`          | Envía la salida de un comando a un archivo.                                 |
+| `Out-String`        | Convierte la salida en una cadena de texto.                                 |
+| `Test-Path`         | Verifica si una ruta existe.                                                |
+| `Split-Path`        | Divide una ruta en sus componentes.                                         |
+| `Join-Path`         | Combina partes de una ruta en una sola.                                     |
+| `Resolve-Path`      | Muestra la ruta completa de un archivo o carpeta.                           |
+| `Convert-Path`      | Convierte una ruta relativa en absoluta.                                    |
+| `Get-Location`      | Muestra el directorio actual.                                               |
+| `Set-Location`      | Cambia el directorio actual.                                                |
+| `Push-Location`     | Guarda la ubicación actual y cambia a otra.                                 |
+| `Pop-Location`      | Vuelve a la ubicación guardada previamente.                                 |
+| `New-PSDrive`       | Crea una nueva unidad de PowerShell.                                        |
+| `Remove-PSDrive`    | Elimina una unidad de PowerShell.                                           |
+| `Get-Acl`           | Obtiene los permisos de archivos o carpetas.                                |
+| `Set-Acl`           | Cambia los permisos de archivos o carpetas.                                 |
+| `Get-FileHash`      | Calcula el hash de un archivo.                                              |
+| `Compress-Archive`  | Comprime archivos o carpetas en un archivo ZIP.                             |
+| `Expand-Archive`    | Extrae archivos de un archivo ZIP.                                          |
+| `Get-Unique`        | Filtra elementos duplicados de una lista.                                   |
+| `Measure-Object`    | Realiza cálculos (conteo, suma, promedio) sobre objetos.                    |
+| `Select-String`     | Busca texto dentro de archivos.                                             |
+| `Export-Csv`        | Exporta datos a un archivo CSV.                                             |
+| `Import-Csv`        | Importa datos desde un archivo CSV.                                         |
+| `Export-Clixml`     | Exporta objetos a un archivo XML.                                           |
+| `Import-Clixml`     | Importa objetos desde un archivo XML.                                       |
+| `Format-Table`      | Da formato tabular a la salida.                                             |
+| `Format-List`       | Da formato de lista a la salida.                                            |
+| `Format-Wide`       | Muestra la salida en columnas anchas.                                       |
+
+---
+
+### Ejemplo visual de uso
+
+```powershell
+# Listar archivos en el directorio actual
+Get-ChildItem
+
+# Copiar un archivo
+Copy-Item -Path archivo.txt -Destination C:\Backup\archivo.txt
+
+# Buscar una palabra en archivos de texto
+Select-String -Path *.txt -Pattern "PowerShell"
+```
